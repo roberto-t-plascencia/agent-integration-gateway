@@ -1,0 +1,29 @@
+{
+  "name": "agent-integration-gateway",
+  "version": "0.1.0",
+  "description": "Reference MCP gateway for connecting third-party AI agents to an enterprise platform with entitlements, signed webhooks, and an owned, tamper-evident decision-trace log.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Roberto Plascencia",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "mcp": "tsx src/server.ts",
+    "webhooks": "tsx src/webhookServer.ts",
+    "verify-traces": "tsx src/cli/verifyTraces.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
